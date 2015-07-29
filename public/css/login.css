@@ -34,7 +34,9 @@ body {
 	margin: 0;
 }
 
-h3 { margin: 0; }
+h3 { margin: 0;
+	margin-top:35em;
+}
 
 a {
 	color: #999;
@@ -80,7 +82,6 @@ input[type="submit"] { cursor: pointer; }
 .container {
   left: 75%;
   position: fixed;
-  top: 35%;
   transform: translate(-50%, -50%);
 }
 
@@ -91,6 +92,7 @@ input[type="submit"] { cursor: pointer; }
 }
 
 #login-form h3 {
+		margin-top: 30em;
 	background-color: #282830;
 	border-radius: 5px 5px 0 0;
 	color: #fff;
@@ -98,10 +100,12 @@ input[type="submit"] { cursor: pointer; }
 	padding: 20px;
 	text-align: center;
 	text-transform: uppercase;
-	margin-top:20em;
+
+	
 }
 
 #login-form fieldset {
+	top:-7em;
 	background: #fff;
 	border-radius: 0 0 5px 5px;
 	padding: 20px;
