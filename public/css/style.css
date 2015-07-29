@@ -1,4 +1,6 @@
-
+*{
+	font-family: 'Poiret One', cursive;
+}
 form {
 	 position:absolute;
     top:25%;

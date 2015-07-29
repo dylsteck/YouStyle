@@ -1,4 +1,6 @@
-
+*{
+	font-family: 'Poiret One', cursive;
+}
 
 form{
 	padding-top:35%;
@@ -86,7 +88,6 @@ input[type="submit"] { cursor: pointer; }
 
 #login-form {
 	width: 300px;
-	top:35%;
 }
 
 #login-form h3 {
@@ -97,6 +98,7 @@ input[type="submit"] { cursor: pointer; }
 	padding: 20px;
 	text-align: center;
 	text-transform: uppercase;
+	margin-top:20em;
 }
 
 #login-form fieldset {
