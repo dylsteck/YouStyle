@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="css/login.css">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Clothing Site</a>
+      <a class="navbar-brand" href="#">Clothing Site</a>
     </div>
     <div>
       <ul class="nav navbar-nav">
@@ -23,36 +23,19 @@
       </ul>
     </div>
   </div>
-    </nav>
-		
-		<div class="container">
-
-  <div id="login-form">
-
-    <h3>Login</h3>
-
-    <fieldset>
-
-      
-
-        <input type="text" name="username" placeholder="Username">
-			<input type="password" name="password" placeholder="Password">
-       
-
-        <input type="submit" value="Login">
-
-        <footer class="clearfix">
-
-
-        </footer>
-
-      </form>
-
-    </fieldset>
-
-  </div> <!-- end login-form -->
-
-</div>
-  </body>
+		</nav>
+		<form action="/signup"   name="formsignup" method="post" accept-charset="utf-8">
+				<input  type="text" name="username" placeholder="Username" require>
+			<br><br>
+				<select name="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				</select>
+			<br><br>
+				<input  type="password" name="password" placeholder="Password" require>
+				<br><br>
+			<input type="submit" value="Submit">
+						</form>
 	
+  </body>
 </html>
