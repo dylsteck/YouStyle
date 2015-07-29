@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>YouStyle</title>
+		<title>Discover</title>
+    <h1>Discover YouStyle</h1>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
+	</head> 
+  <body>
 		<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <img src="YouStyle.png">
+      <a class="navbar-brand" href="#">YouStyle</a>
     </div>
     <div>
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
         <li><a href="/discover">Discover</a></li>
-        <li><a href="/signout">Sign Out</a></li>
-       
+        <li><a href="/signup">Sign Up</a></li>
       </ul>
     </div>
-		<h2 class="padding">Hello, <%=@user.username.capitalize%>!</h2>
-  </div>
-		</nav>
-		
-		
+   </div>
+  </nav>
+    
+    <a href="/discover">Back to Discovery</a>
+    
   </body>
 </html>

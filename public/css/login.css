@@ -1,3 +1,9 @@
+
+
+form{
+	padding-top:35%;
+}
+
 $color: #999;
 $color-bg: #eaeaea;
 
@@ -70,9 +76,9 @@ input[type="submit"] { cursor: pointer; }
 }
 
 .container {
-  left: 50%;
+  left: 75%;
   position: fixed;
-  top: 50%;
+  top: 35%;
   transform: translate(-50%, -50%);
 }
 
@@ -80,6 +86,7 @@ input[type="submit"] { cursor: pointer; }
 
 #login-form {
 	width: 300px;
+	top:35%;
 }
 
 #login-form h3 {
@@ -119,7 +126,7 @@ input[type="submit"] { cursor: pointer; }
 	font-size: 14px;
 }
 
-#login-form input[type="username"],
+#login-form input[type="text"],
 #login-form input[type="password"] {
 	border: 1px solid #dcdcdc;
 	padding: 12px 10px;

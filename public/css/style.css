@@ -1,6 +1,13 @@
+
 form {
 	 position:absolute;
     top:25%;
     right:60%;
     left:40%;
+}
+h2.padding{
+	 
+    padding-right: -55px;
+		padding-left:1005px;
+ 
 }
