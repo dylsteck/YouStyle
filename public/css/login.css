@@ -5,6 +5,11 @@
 form{
 	padding-top:35%;
 }
+body {
+  font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #404040;
+  background: #596778;
+}
 
 $color: #999;
 $color-bg: #eaeaea;

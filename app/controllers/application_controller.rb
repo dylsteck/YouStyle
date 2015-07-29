@@ -54,6 +54,7 @@ end
 	end
  
   get'/discover' do
+		@user = User.find_by_id session[:user_id]
     @brands = Brands.new.getbrands["retailers"]
 		erb :discover
   end

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="css/signup.css">
 		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -25,7 +25,7 @@
     </div>
   </div>
 		</nav>
-		<form action="/signup"   name="formsignup" method="post" accept-charset="utf-8">
+<!-- 		<form action="/signup"   name="formsignup" method="post" accept-charset="utf-8">
 				<input  type="text" name="username" placeholder="Username" require>
 			<br><br>
 				<select name="gender">
@@ -36,7 +36,17 @@
 				<input  type="password" name="password" placeholder="Password" require>
 				<br><br>
 			<input type="submit" value="Submit">
-						</form>
+						</form> -->
+		<form action="/signup" class="sign-up"  name="formsignup" method="post" accept-charset="utf-8">
+    <h1 class="sign-up-title">Sign up in seconds</h1>
+    <input type="text" name="username" class="sign-up-input" placeholder="What's your username?" autofocus>
+			<select class="sign-up-input" name="gender">
+				<option class="sign-up-input" value="male">Male</option>
+				<option class="sign-up-input" value="female">Female</option>
+				</select>
+    <input type="password" name="password" class="sign-up-input" placeholder="Choose a password">
+    <input type="submit" value="Sign me up!" class="sign-up-button">
+  </form>
 	
   </body>
 </html>
