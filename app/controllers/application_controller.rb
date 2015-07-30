@@ -56,6 +56,7 @@ end
 	end
   
   post '/account' do
+    @user = User.find_by_id session[:user_id]
     erb :account
   end
  
@@ -73,7 +74,6 @@ end
   
 	get '/search' do
 		redirect ('/discover')
-		@answer = CreateUserChoice.new
 	@user = User.find_by_id session[:user_id]	
     erb :search
 	end
