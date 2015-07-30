@@ -11,16 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150730140714) do
+ActiveRecord::Schema.define(version: 20150730132842) do
 
   create_table "favorites", force: :cascade do |t|
     t.string "type"
     t.string "brand"
-    t.string "color"
-  end
-
-  create_table "user_choice", force: :cascade do |t|
-    t.string "type"
     t.string "color"
   end
 

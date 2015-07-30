@@ -72,7 +72,7 @@ end
   end
   
 	get '/search' do
-		@discoverend = UserChoice.new.clothing("mens+clothing")["products"]
+		redirect ('/discover')
 		@answer = CreateUserChoice.new
 	@user = User.find_by_id session[:user_id]	
     erb :search

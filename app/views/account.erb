@@ -1,3 +1,7 @@
+<!-- Problems:
+Can't figure out sessions
+Can't make multiple submit buttons -->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,7 +38,7 @@ div.relative {
        
       </ul>
     </div>
-  <h2 class="padding">Hello, <%#=@user.username.capitalize%>!</h2>
+  <h2 class="padding">Hello, <%=@user.username.capitalize%>!</h2>
   </div>
 		</nav>
     
@@ -50,7 +54,9 @@ div.relative {
     
     <form action="account" method="POST">
       <fieldset>
-    <input type="submit" value="Favorite"></fieldset>
+    <input type="submit" value="Favorite">
+    <input type="hidden" value="Blue and Green Plaid Dress" name="favorites">
+      </fieldset>
 </form>
     
     <div class="relative">
@@ -58,22 +64,22 @@ div.relative {
     </div>
    
     <br>
-    
+<!--     
     <form action="account" method="POST">
       <fieldset>
     <input type="submit" value="Favorite"></fieldset>
 </form>
-    
+     -->
     <div class="relative">
     <img style="width:300px;height:300px;border:5px double black" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSSaPhhbZPGAK6PTVSVSxdQ5rjW7XCQE_Fit9DvsJyVVBsVkGw27N4nf8e9fA&usqp=CAE" alt="Black Sweater Dress" > <!-- Vera Wang -->
     </div>
     
     <br>
-    
+<!--     
     <form action="account" method="POST">
       <fieldset>
     <input type="submit" value="Favorite"></fieldset>
 </form>
-    
+     -->
   </body>
 </html>
