@@ -12,6 +12,7 @@
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 	</head> 
   <body>
 		<nav class="navbar navbar-default">
@@ -28,25 +29,24 @@
       </ul>
     </div>
 		<h2 class="padding">Hello, <%=@user.username.capitalize%>!</h2>
+		<h3>Clothing:</h3>
    </div>
   </nav>
-		<h2>Clothing:
-			<form method="post" action='/account'>
+		<h2 id="resulttext">
+			<form method="post" action='/account' id="results">
         <%@discoverend.each_with_index do |clothing, i| %>
 			<br>
+				<img src="<%="#{@image = clothing ["image"]["sizes"]["IPhoneSmall"]["url"]}" %>">
+				<br>
 			<a href="<%="#{clothing["pageUrl"]}" %>"><%="#{clothing["brandedName"]}, #{clothing["priceLabel"]}" %></a> 
-				     
-        Like
-				<input type="radio" name="<%=i%>" value="yes">
-				Dislike
-				<input type="radio" name="<%=i%>" value="no">
-        <input type="submit" value="Favorite">
-    <input type="hidden" value="favorites" name="favorites">
-        </form>
 			<br>
-			<img src="<%="#{@image = clothing ["image"]["sizes"]["IPhoneSmall"]["url"]}" %>"> 
+				Yes
+				<input type="radio" name="i" value="yes">
+				No
+				<input type="radio" name="i" value="no">
+			<br> 
 		<% end %>
-			
+			</form>
 			
 		</h2>
     
