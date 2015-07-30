@@ -9,7 +9,17 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    
+    <style>
+div.relative {
+    position: relative;
+    left: 30px;
+/*     border: 3px solid #8AC007; */
+}
+</style>
+    
 	</head>
+  
 	<body>
 		<nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -24,10 +34,46 @@
        
       </ul>
     </div>
-		<h2 class="padding">Hello, <%=@user.username.capitalize%>!</h2>
+  <h2 class="padding">Hello, <%#=@user.username.capitalize%>!</h2>
   </div>
 		</nav>
-		
-		
+    
+    <p><center><font size="10">Favorites</font></center></p>
+    <br>
+    <p><center><font size="10">Random Outfits</font></center></p>
+    
+		<div class="relative">
+    <img style="width:300px;height:300px;border:5px double black" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTLiwH_dZiBO6C6YyaDG6jQOFBtBbHXRsJjqpx5m7o6w-49vcEF9fpW9HHVXw7dNZQlCIX5BULa&usqp=CAE" alt="Blue and Green Plaid Dress"> <!-- Nordstrom -->
+    </div>
+    
+    <br>
+    
+    <form action="account" method="POST">
+      <fieldset>
+    <input type="submit" value="Favorite"></fieldset>
+</form>
+    
+    <div class="relative">
+    <img style="width:300px;height:300px;border:5px double black" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRizmftTzrksthAKWP7w4Ck1DmRXUh8x-38NmbCx_lJiMIAm1TdEZmpEOWo0LK3SDZXepeV7yaC&usqp=CAE" alt="Brown Cocktail Nylon Dress" > <!-- Victoria's Secret -->
+    </div>
+   
+    <br>
+    
+    <form action="account" method="POST">
+      <fieldset>
+    <input type="submit" value="Favorite"></fieldset>
+</form>
+    
+    <div class="relative">
+    <img style="width:300px;height:300px;border:5px double black" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSSaPhhbZPGAK6PTVSVSxdQ5rjW7XCQE_Fit9DvsJyVVBsVkGw27N4nf8e9fA&usqp=CAE" alt="Black Sweater Dress" > <!-- Vera Wang -->
+    </div>
+    
+    <br>
+    
+    <form action="account" method="POST">
+      <fieldset>
+    <input type="submit" value="Favorite"></fieldset>
+</form>
+    
   </body>
 </html>

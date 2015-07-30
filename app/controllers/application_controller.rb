@@ -1,6 +1,8 @@
 require_relative "../../config/environment"
 require_relative "../models/api.rb"
  require_relative "../models/user.rb"
+require_relative "../models/discoverend.rb"
+require_relative "../models/favorite.rb"
 class ApplicationController < Sinatra::Base
   
   set :views, "app/views"
@@ -14,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 	
 	get'/' do
-			@brands = Brands.new.getbrands["retailers"]
+			@brands = API.new.getbrands["retailers"]
 # 		puts @brands
 		@user = User.find_by_id session[:user_id]
 		if session[:user_id] == nil
@@ -49,13 +51,19 @@ end
 		@newuser = User.new ({:username => params[:username], :gender => params[:gender], :password => params[:password]})
 		@users = User.all
 		@user = User.find_by_id session[:user_id]
-		@brands = Brands.new.getbrands["retailers"]
+		@brands = API.new.getbrands["retailers"]
 		erb :account
 	end
+  
+  post '/account' do
+    erb :account
+  end
  
   get'/discover' do
 		@user = User.find_by_id session[:user_id]
-    @brands = Brands.new.getbrands["retailers"]
+    @brands = API.new.getbrands["retailers"]
+		@categories = API.new.getcategories["categories"]
+		@colors = API.new.getcolors["colors"]
 		erb :discover
   end
   
@@ -63,7 +71,15 @@ end
     erb :discover
   end
   
+	get '/search' do
+		@discoverend = UserChoice.new.clothing("mens+clothing")["products"]
+		@answer = CreateUserChoice.new
+	@user = User.find_by_id session[:user_id]	
+    erb :search
+	end
   post '/search' do
+		@discoverend = UserChoice.new.clothing(params[:type])["products"]
+		@user = User.find_by_id session[:user_id]	
     erb :search
   end
   
