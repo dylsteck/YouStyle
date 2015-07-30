@@ -30,11 +30,24 @@
 		<h2 class="padding">Hello, <%=@user.username.capitalize%>!</h2>
    </div>
   </nav>
-		<h2>You chose
-		<%@discoverend.each do |clothing| %>
+		<h2>Clothing:
+			<form method="post" action='/account'>
+        <%@discoverend.each_with_index do |clothing, i| %>
 			<br>
-			<%="#{clothing["brandedName"]}, #{clothing["priceLabel"]}" %>
+			<a href="<%="#{clothing["pageUrl"]}" %>"><%="#{clothing["brandedName"]}, #{clothing["priceLabel"]}" %></a> 
+				     
+        Like
+				<input type="radio" name="<%=i%>" value="yes">
+				Dislike
+				<input type="radio" name="<%=i%>" value="no">
+        <input type="submit" value="Favorite">
+    <input type="hidden" value="favorites" name="favorites">
+        </form>
+			<br>
+			<img src="<%="#{@image = clothing ["image"]["sizes"]["IPhoneSmall"]["url"]}" %>"> 
 		<% end %>
+			
+			
 		</h2>
     
  </body>

@@ -14,6 +14,15 @@ form {
     right:60%;
     left:40%;
 }
+ #results {
+	position:absolute;
+    top:15%;
+/*     right:60%; */
+    left:2%;
+}
+#resulttext {
+	font-family: 'Roboto Condensed', sans-serif;
+}
 h2.padding{
 	 
     padding-right: -55px;
