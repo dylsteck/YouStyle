@@ -5,6 +5,7 @@ gem "sinatra-activerecord"
 gem "rake"
 gem 'bcrypt', '~> 3.1.10'
 gem 'json', '~> 1.8.3'
+gem 'pg'
 
 group :development do
   gem "pry"

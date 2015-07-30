@@ -23,6 +23,7 @@ GEM
     json (1.8.3)
     method_source (0.8.2)
     minitest (5.7.0)
+    pg (0.18.2)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -69,6 +70,7 @@ DEPENDENCIES
   activerecord
   bcrypt (~> 3.1.10)
   json (~> 1.8.3)
+  pg
   pry
   rake
   shotgun
