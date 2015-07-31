@@ -56,7 +56,14 @@ end
 	end
   
   post '/account' do
-    @user = User.find_by_id session[:user_id]
+		@user = User.find_by_id session[:user_id]
+		params.each_key do |infoid|
+			infoid.to_i
+			@clothing = Favorite.new ({:itemid => infoid.to_i})
+			@user.favorites << @clothing   
+			@clothing.save
+			@user.save
+		end
     erb :account
   end
  

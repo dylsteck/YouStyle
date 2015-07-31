@@ -45,14 +45,14 @@
 				<br>
 				Yes
 				<input type="radio" name="<%="#{i}"%>" value="yes">
-				No
-				<input type="radio" name="<%="#{i}"%>" value="no">
 			<br> 
 				</div>
 		<% end %>
 				<input type="submit" value="Add to Favorites">
 			</form>
-			<button><a href="/search"><p>Page 1</p></a></button>
+			 <form action="/search" method="POST">
+      <input type="submit" value="Page 1">
+      </form>
 		</h2>
  </body>
 </html>

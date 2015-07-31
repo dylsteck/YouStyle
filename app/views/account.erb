@@ -40,6 +40,11 @@ div.relative {
     <br>
     <p><center><font size="10">Favorites</font></center></p>
     <br>
+		<%@user.favorites.each do |favorite|%>
+		<%= favorite.itemid %>
+		<%= "#{favorite.convert["brandedName"]}" %>
+		<br>
+		<% end%>
 <!--     <p><center><font size="10">Random Outfits</font></center></p> -->
 <!--     
 		<div class="relative">

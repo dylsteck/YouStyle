@@ -14,9 +14,8 @@
 ActiveRecord::Schema.define(version: 20150730132842) do
 
   create_table "favorites", force: :cascade do |t|
-    t.string "type"
-    t.string "brand"
-    t.string "color"
+    t.integer "itemid"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

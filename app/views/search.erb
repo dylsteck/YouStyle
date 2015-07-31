@@ -32,9 +32,10 @@
 		<h3>Clothing:</h3>
    </div>
   </nav>
+		<h4>If you see clothing you like, you can either click on it to buy it, or you can select yes to add it to your favorites. If you do so, click the Add to Favorites button at the bottom of the page when you are done!</h4>
 		<h2 id="resulttext">
 			<form method="post" action='/account' id="results">
-        <%@discoverend.each_with_index do |clothing, i| %>
+				<%@discoverend.each do |clothing| %>
 			<br>
 				<div id="things">
 				<img id="clothingphoto" src="<%="#{@image = clothing ["image"]["sizes"]["IPhoneSmall"]["url"]}" %>">
@@ -44,15 +45,17 @@
 			<br>
 				<br>
 				Yes
-				<input type="radio" name="<%="#{i}"%>" value="yes">
-				No
-				<input type="radio" name="<%="#{i}"%>" value="no">
+					<input type="radio" name="<%="#{clothing["id"]}"%>" value="yes">
 			<br> 
 				</div>
 		<% end %>
 				<input type="submit" value="Add to Favorites">
 			</form>
-			<p><a href="/search2">Page 2</a></p>
+<!--       <a href="/search2">Page 2</a> -->
+      <form action="/search2" method="POST">
+      <input type="submit" value="Page 2">
+      </form>
 		</h2>
+    
  </body>
 </html>
