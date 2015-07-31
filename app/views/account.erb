@@ -37,15 +37,20 @@ div.relative {
   <h2 class="padding">Hello, <%=@user.username.capitalize%>!</h2>
   </div>
 		</nav>
-		<div id="things">
     <br>
     <p><center><font size="10">Favorites</font></center></p>
     <br>
+		<h2 id="resulttext">
 		<%@user.favorites.each do |favorite|%>
-		<%= favorite.itemid %>
+			<div id="things">
+				<img src="<%= favorite.convert["image"]["sizes"]["IPhoneSmall"]["url"] %>">
+				<br>
+				<br>
+				<a href="<%"#{favorite.convert["pageUrl"]}"%>"></a>
 		<%= "#{favorite.convert["brandedName"]}" %>
 		<br>
+						</div>
 		<% end%>
-		</div>
+		</h2>
 	</body>
 </html>

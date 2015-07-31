@@ -34,7 +34,7 @@
   </nav>
 		<h2 id="resulttext">
 			<form method="post" action='/account' id="results">
-				<%@discovernext.each_with_index do |clothing, i| %>
+        <%@discovernext.each_with_index do |clothing, i| %>
 			<br>
 				<div id="things">
 				<img id="clothingphoto" src="<%="#{@image = clothing ["image"]["sizes"]["IPhoneSmall"]["url"]}" %>">
@@ -52,6 +52,7 @@
 			</form>
 			 <form action="/search" method="POST">
       <input type="submit" value="Page 1">
+      <input type="hidden" name="type">
       </form>
 		</h2>
  </body>
