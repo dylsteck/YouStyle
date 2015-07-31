@@ -14,11 +14,33 @@ form {
     right:60%;
     left:40%;
 }
+input {
+	margin-left:3em;
+}
+ #things{
+width: 1390px;
+height: 400px;
+
+
+ padding: 10px, 40px; 
+	  border-radius: 25px;
+
+margin: 88px;
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+background: rgb(255, 255, 255);
+}
+img {
+	margin-left:3em;
+}
  #results {
 	position:absolute;
     top:15%;
 /*     right:60%; */
-    left:2%;
+    left:-6%;
 }
 #resulttext {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -29,4 +51,3 @@ h2.padding{
 		padding-left:1005px;
  
 }
-<img style="border:5px solid black">

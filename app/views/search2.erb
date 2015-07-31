@@ -34,7 +34,7 @@
   </nav>
 		<h2 id="resulttext">
 			<form method="post" action='/account' id="results">
-        <%@discoverend.each_with_index do |clothing, i| %>
+				<%@discovernext.each_with_index do |clothing, i| %>
 			<br>
 				<div id="things">
 				<img id="clothingphoto" src="<%="#{@image = clothing ["image"]["sizes"]["IPhoneSmall"]["url"]}" %>">
@@ -52,7 +52,7 @@
 		<% end %>
 				<input type="submit" value="Add to Favorites">
 			</form>
-			<p><a href="/search2">Page 2</a></p>
+			<button><a href="/search"><p>Page 1</p></a></button>
 		</h2>
  </body>
 </html>

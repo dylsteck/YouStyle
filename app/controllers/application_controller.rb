@@ -41,14 +41,14 @@ end
   end
 
 	post '/signup' do
-		@newuser = User.new ({:username => params[:username], :gender => params[:gender], :password => params[:password]})
+		@newuser = User.new ({:username => params[:username],  :password => params[:password]})
 		@users = User.all
 	@newuser.save
 		redirect('/')
 	end
 	
 	get '/account' do
-		@newuser = User.new ({:username => params[:username], :gender => params[:gender], :password => params[:password]})
+		@newuser = User.new ({:username => params[:username],  :password => params[:password]})
 		@users = User.all
 		@user = User.find_by_id session[:user_id]
 		@brands = API.new.getbrands["retailers"]
@@ -81,6 +81,16 @@ end
 		@discoverend = UserChoice.new.clothing(params[:type])["products"]
 		@user = User.find_by_id session[:user_id]	
     erb :search
+  end
+	
+	get '/search2' do
+	@user = User.find_by_id session[:user_id]	
+    erb :search2
+	end
+  post '/search2' do
+		@discovernext = UserChoice.new.clothing2(params[:type])["products"]
+		@user = User.find_by_id session[:user_id]	
+    erb :search2
   end
   
 	get '/signout' do 
