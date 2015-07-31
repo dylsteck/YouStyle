@@ -3,7 +3,7 @@
 }
 
 form{
-	padding-top:35%;
+	padding-top:30%;
 }
 body {
   font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -85,7 +85,8 @@ input[type="submit"] { cursor: pointer; }
 }
 
 .container {
-  left: 75%;
+  left: 40%;
+	top:1%;
   position: fixed;
   transform: translate(-50%, -50%);
 }
