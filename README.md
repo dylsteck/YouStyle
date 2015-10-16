@@ -3,5 +3,4 @@
 #MVP: 
 ##Use a basic API to display some clothing, give different clothing tags(based on personality and style), and lets the user select different clothing. 
 
-#Visit at:
-## http://youstyle.herokuapp.com
+#Coming soon to the world wide web...
